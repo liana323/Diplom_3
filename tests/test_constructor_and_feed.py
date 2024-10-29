@@ -1,6 +1,9 @@
 import pytest
 import allure
 from pages import LoginPage, FeedPage, PersonalAccountPage
+from LoginPage import *
+from FeedPage import *
+from PersonalAccountPage import *
 
 @allure.feature("Переходы: Конструктор и Лента заказов")
 def test_constructor_and_feed(browser):

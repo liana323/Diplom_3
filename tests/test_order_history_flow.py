@@ -1,7 +1,8 @@
 import pytest
 import allure
-from pages import LoginPage, PersonalAccountPage, FeedPage
-
+from pages.LoginPage import LoginPage
+from pages.PersonalAccountPage import PersonalAccountPage
+from pages.FeedPage import FeedPage
 
 @allure.feature("История заказов")
 def test_order_history_flow(browser, test_data):

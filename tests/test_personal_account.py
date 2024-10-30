@@ -1,5 +1,7 @@
 import allure
-from pages import LoginPage, PersonalAccountPage
+from pages.LoginPage import LoginPage
+from pages.PersonalAccountPage import PersonalAccountPage
+from pages.FeedPage import FeedPage
 
 @allure.feature("Личный кабинет")
 def test_personal_account(browser, test_data):

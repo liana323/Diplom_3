@@ -1,7 +1,10 @@
 import allure
 import time
-from pages import LoginPage, PersonalAccountPage, FeedPage
+from pages.LoginPage import LoginPage
+from pages.PersonalAccountPage import PersonalAccountPage
+from pages.FeedPage import FeedPage
 
+@allure.feature("Создание заказа и проверка счетчиков")
 def test_create_order_and_check_counters(browser, test_data):
     login_page = LoginPage(browser)
     personal_account_page = PersonalAccountPage(browser)
@@ -40,6 +43,7 @@ def test_create_order_and_check_counters(browser, test_data):
     with allure.step("Оформление заказа"):
         feed_page.create_order()
 
+
     with allure.step("Проверка успешного оформления заказа"):
         order_number = feed_page.extract_order_number()
         assert order_number, "Номер заказа не отображается"
@@ -59,7 +63,6 @@ def test_create_order_and_check_counters(browser, test_data):
 
     with allure.step("Проверка увеличения счетчиков"):
         feed_page.refresh_page()
-        time.sleep(3)  # Небольшая пауза для обновления данных
 
         total_orders_after = feed_page.get_order_count("all_time")
         today_orders_after = feed_page.get_order_count("today")

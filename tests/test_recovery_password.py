@@ -1,5 +1,7 @@
 import allure
-from pages import LoginPage
+from pages.LoginPage import LoginPage
+from pages.PersonalAccountPage import PersonalAccountPage
+from pages.FeedPage import FeedPage
 
 @allure.feature("Восстановление пароля")
 def test_recovery_password(browser, test_data):

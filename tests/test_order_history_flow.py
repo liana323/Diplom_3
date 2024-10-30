@@ -11,7 +11,7 @@ def test_order_history_flow(browser, test_data):
     feed_page = FeedPage(browser)
 
     # Открываем сайт и переходим в личный кабинет
-    login_page.open("https://stellarburgers.nomoreparties.site/")
+    login_page.open_base_url()
     login_page.go_to_personal_account()
 
     with allure.step("Вход в личный кабинет"):

@@ -1,4 +1,0 @@
-Заказ 146530 не найден в 'В работе'
-assert False
- +  where False = is_order_in_progress('146530')
- +    where is_order_in_progress = <pages.FeedPage.FeedPage object at 0x00000260704F1BB0>.is_order_in_progress

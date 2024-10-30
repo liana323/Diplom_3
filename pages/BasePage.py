@@ -1,8 +1,4 @@
-from selenium.common import TimeoutException, NoSuchElementException
-from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from locators import *
 import allure
 
 class BasePage:
@@ -15,3 +11,7 @@ class BasePage:
     def open(self, url):
         self.browser.get(url)
 
+    @allure.step("Открываем базовый URL")
+    def open_base_url(self):
+        """Открывает базовый URL."""
+        self.browser.get(self.BASE_URL)

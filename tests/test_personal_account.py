@@ -9,7 +9,7 @@ def test_personal_account(browser, test_data):
     personal_account_page = PersonalAccountPage(browser)
 
     # Открываем сайт и переходим в личный кабинет
-    login_page.open("https://stellarburgers.nomoreparties.site/")
+    login_page.open_base_url()
     login_page.go_to_personal_account()
 
     with allure.step("Вход в личный кабинет"):

@@ -10,7 +10,7 @@ def test_constructor_and_feed(browser):
     personal_account_page = PersonalAccountPage(browser)
 
     with allure.step("Открытие основной страницы"):
-        login_page.open("https://stellarburgers.nomoreparties.site/")
+        login_page.open_base_url()
         assert personal_account_page.is_main_page(), "Не удалось открыть основную страницу"
 
     with allure.step("Переход в Конструктор"):
